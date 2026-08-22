@@ -1,50 +1,63 @@
-# Pathbreak Website (peeked)
+# Pathbreak — Official Website
 
-Official product website for **Pathbreak** — the science-backed, game-like goal tracker that turns any ambition into a neurologically optimized roadmap.
+Science-backed, game-like goal tracker that turns any ambition into a neurologically optimized roadmap.
 
-## Live Site
+**Live site (after you enable Pages):**  
+https://jay117king.github.io/peeked/
 
-Once GitHub Pages is enabled, the site will be available at:
-
-**https://jay117king.github.io/peeked/**
-
-## What’s Included
-
-- Full single-page marketing site explaining Pathbreak in high detail
-- Sections covering:
-  - The problem with traditional goal apps
-  - The Pathbreak solution
-  - Step-by-step user flow
-  - Complete feature set
-  - Scientific foundations (neuroscience, behavioral psychology, learning science, clinical research)
-  - Technical algorithm overview
-  - Live examples (Bible reading paths, Java learning tracks)
-  - Product vision & roadmap phases
-  - Waitlist CTA
-
-## Tech
-
-- Pure HTML, CSS, and vanilla JavaScript
-- Fully responsive
-- Modern dark theme with gradient accents
-- Smooth scroll and subtle entrance animations
-- Ready for GitHub Pages
-
-## Enabling GitHub Pages
-
-1. Go to the repository **Settings → Pages**
-2. Under “Source”, select **Deploy from a branch**
-3. Choose branch `main` and folder `/ (root)`
-4. Save — the site will be live in about a minute
-
-## Local Preview
-
-Just open `index.html` in any modern browser, or use a simple local server:
-
-```bash
-npx serve .
-```
+**Repository:**  
+https://github.com/jay117king/peeked
 
 ---
 
-Built as part of the Pathbreak product exploration.
+## Enable the live website (GitHub Pages) — 30 seconds
+
+1. Open this repo while logged in as **jay117king**:  
+   https://github.com/jay117king/peeked
+
+2. Click **Settings** (repo menu bar).
+
+3. In the left sidebar, click **Pages**.
+
+4. Under **Build and deployment → Source**:
+   - Select **Deploy from a branch**
+   - **Branch:** `main`
+   - **Folder:** `/ (root)`
+   - Click **Save**
+
+5. Wait 30–90 seconds, then open:  
+   **https://jay117king.github.io/peeked/**
+
+If the page is blank or 404, hard-refresh (Ctrl/Cmd+Shift+R) or wait another minute for the first deploy.
+
+---
+
+## What’s on the site
+
+- Hero + app mockup  
+- Problem / Solution  
+- How it works (4 steps)  
+- Full feature set  
+- Science foundation (neuroscience, behavioral psych, learning science, clinical)  
+- Algorithm pipeline  
+- Smart suggestion examples (Bible, Java)  
+- Vision phases  
+- Waitlist CTA  
+
+Stack: pure HTML, CSS, vanilla JS. No build step. Fully responsive.
+
+## Local preview
+
+```bash
+# open index.html in a browser, or:
+npx serve .
+```
+
+## Optional: Vercel
+
+If you deploy to Vercel, turn **off** Deployment Protection / Vercel Authentication under  
+Project → Settings → Deployment Protection, or the site will redirect to login.
+
+---
+
+Pathbreak — built for real human cognition.
