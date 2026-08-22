@@ -1,54 +1,81 @@
-// Smooth scroll for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
+(function () {
+  const navbar = document.getElementById('navbar');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  const form = document.getElementById('waitlist-form');
+  const formMsg = document.getElementById('form-msg');
 
-// Waitlist form handling
-const form = document.getElementById('waitlist');
-if (form) {
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const email = form.querySelector('input[type="email"]').value;
-    // In a real app this would send to a backend / ConvertKit / etc.
-    alert(`Thanks for joining the waitlist!\n\nWe'll notify ${email} when Pathbreak is ready for early access.`);
-    form.reset();
-  });
-}
-
-// Simple navbar background on scroll
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
-    navbar.style.background = 'rgba(11, 15, 25, 0.95)';
-  } else {
-    navbar.style.background = 'rgba(11, 15, 25, 0.85)';
+  // Mobile menu
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    navLinks.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
-});
 
-// Intersection Observer for subtle fade-in animations
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -40px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
-}, observerOptions);
 
-document.querySelectorAll('.card, .feature-card, .science-card, .algo-step, .example-card, .vision-phase, .timeline-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+  // Navbar scroll state
+  function onScroll() {
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 24);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Waitlist form
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = form.querySelector('input[type="email"]').value;
+      form.reset();
+      if (formMsg) {
+        formMsg.textContent = 'You\'re on the list — we\'ll email ' + email + ' when early access opens.';
+        formMsg.classList.add('success');
+      }
+    });
+  }
+
+  // Entrance animations
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+    );
+
+    document
+      .querySelectorAll('.card, .feature-card, .science-card, .algo-step, .example-card, .vision-phase, .timeline-item')
+      .forEach((el) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+        observer.observe(el);
+      });
+  }
+})();

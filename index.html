@@ -5,409 +5,420 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pathbreak – Science-Backed Goal Tracking That Actually Works</title>
   <meta name="description" content="Pathbreak turns any goal into a neurologically optimized, game-like roadmap. Built on cognitive neuroscience, behavioral psychology, and real productivity research." />
+  <meta name="theme-color" content="#0b0f19" />
+  <meta property="og:title" content="Pathbreak – Goals your brain can actually finish" />
+  <meta property="og:description" content="Science-backed, game-like goal tracking. Micro-steps sized to real cognition — not endless to-do lists." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jay117king.github.io/peeked/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <nav class="navbar" id="navbar">
     <div class="container nav-content">
-      <a href="#" class="logo">Pathbreak</a>
-      <ul class="nav-links">
+      <a href="#" class="logo">Pathbreak<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#problem">Problem</a></li>
         <li><a href="#solution">Solution</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#how-it-works">How it works</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#science">Science</a></li>
-        <li><a href="#algorithm">Algorithm</a></li>
+        <li><a href="#compare">Compare</a></li>
         <li><a href="#examples">Examples</a></li>
       </ul>
-      <button class="btn btn-primary nav-cta">Join Waitlist</button>
+      <a href="#waitlist" class="btn btn-primary nav-cta">Join waitlist</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero -->
   <header class="hero">
-    <div class="container hero-content">
-      <div class="badge">Science-backed • Game-like • Actually completable</div>
-      <h1>Turn any goal into a<br /><span class="gradient-text">neurologically optimized</span><br />adventure</h1>
-      <p class="hero-subtitle">
-        Pathbreak decomposes your ambitions into meaningful micro-steps grounded in cognitive neuroscience, 
-        behavioral psychology, and real productivity research — then wraps the journey in a motivating game layer.
-      </p>
-      <div class="hero-cta">
-        <button class="btn btn-primary btn-lg">Get Early Access</button>
-        <button class="btn btn-secondary btn-lg">See How It Works</button>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">15–45 min</span>
-          <span class="stat-label">Optimal step size</span>
+    <div class="hero-inner container">
+      <div class="hero-copy">
+        <div class="badge">
+          <span class="badge-pulse"></span>
+          Science-backed · Game-like · Actually completable
         </div>
-        <div class="stat">
-          <span class="stat-number">Science-first</span>
-          <span class="stat-label">Trained on peer-reviewed research</span>
+        <h1>Turn any goal into a<br /><span class="gradient-text">neurologically optimized</span><br />adventure</h1>
+        <p class="hero-subtitle">
+          Pathbreak breaks ambitions into micro-steps sized for real brains — grounded in cognitive neuroscience and behavioral science — then wraps the journey in a low-pressure game layer.
+        </p>
+        <div class="hero-cta">
+          <a href="#waitlist" class="btn btn-primary btn-lg">Get early access</a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg">See how it works</a>
         </div>
-        <div class="stat">
-          <span class="stat-number">ADHD-friendly</span>
-          <span class="stat-label">Built for real brains</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="mockup">
-        <div class="mockup-header">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        </div>
-        <div class="mockup-body">
-          <div class="goal-card">
-            <h3>Understand Java</h3>
-            <div class="progress-bar"><div class="progress" style="width: 34%"></div></div>
-            <p class="meta">3-month project-based track • Day 12 of 90</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">15–45 min</span>
+            <span class="stat-label">Optimal step size</span>
           </div>
-          <div class="step-list">
-            <div class="step completed">✓ Read variables & types chapter (22 min)</div>
-            <div class="step completed">✓ Build “Hello Variables” mini-project (35 min)</div>
-            <div class="step active">→ Write 5 practice exercises (28 min)</div>
-            <div class="step">Review with spaced repetition (15 min)</div>
+          <div class="stat">
+            <span class="stat-number">Research-led</span>
+            <span class="stat-label">Peer-reviewed foundations</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">ADHD-aware</span>
+            <span class="stat-label">Built for real cognition</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="mockup">
+          <div class="mockup-header">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="mockup-title">Pathbreak</span>
+          </div>
+          <div class="mockup-body">
+            <div class="goal-card">
+              <div class="goal-card-top">
+                <h3>Understand Java</h3>
+                <span class="xp-pill">+340 XP</span>
+              </div>
+              <div class="progress-bar"><div class="progress" style="width: 34%"></div></div>
+              <p class="meta">3-month project track · Day 12 of 90</p>
+            </div>
+            <div class="step-list">
+              <div class="step completed"><span class="step-check">✓</span> Read variables &amp; types (22 min)</div>
+              <div class="step completed"><span class="step-check">✓</span> Build “Hello Variables” (35 min)</div>
+              <div class="step active"><span class="step-arrow">→</span> Write 5 practice exercises (28 min)</div>
+              <div class="step"><span class="step-num">4</span> Spaced repetition review (15 min)</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Problem -->
   <section id="problem" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">The Problem</span>
+        <span class="section-tag">The problem</span>
         <h2>Most goal apps treat humans like machines</h2>
-        <p>Long to-do lists ignore how the brain actually works. The result? Overwhelm, abandonment, and another abandoned New Year’s resolution.</p>
+        <p>Long lists ignore working memory, motivation science, and energy. Overwhelm wins — the goal doesn’t.</p>
       </div>
       <div class="grid-3">
-        <div class="card">
+        <article class="card">
           <div class="card-icon">🧠</div>
-          <h3>Working memory limits ignored</h3>
-          <p>Humans can only hold a handful of items in working memory. Giant task lists exceed cognitive capacity and create anxiety instead of clarity.</p>
-        </div>
-        <div class="card">
+          <h3>Working memory ignored</h3>
+          <p>We hold only a few items in mind. Giant lists exceed capacity and create anxiety instead of clarity.</p>
+        </article>
+        <article class="card">
           <div class="card-icon">📉</div>
           <h3>No dopamine strategy</h3>
-          <p>Motivation is driven by progress signals. Traditional apps give almost no intermediate wins, so the brain loses interest long before the finish line.</p>
-        </div>
-        <div class="card">
+          <p>Motivation needs intermediate wins. Traditional apps give almost none — interest fades before the finish line.</p>
+        </article>
+        <article class="card">
           <div class="card-icon">⚡</div>
           <h3>One-size-fits-none</h3>
-          <p>Everyone gets the same rigid structure. People with ADHD, varying energy patterns, or different learning styles are left behind.</p>
-        </div>
+          <p>Rigid structures fail people with ADHD, shifting energy, or different learning styles.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Solution -->
   <section id="solution" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">The Solution</span>
-        <h2>Pathbreak: Science meets game design</h2>
-        <p>We combine peer-reviewed research on how brains actually complete goals with a progressive, low-pressure game layer.</p>
+        <span class="section-tag">The solution</span>
+        <h2>Science meets game design</h2>
+        <p>Peer-reviewed research on how brains finish goals — plus a progressive, low-pressure game layer.</p>
       </div>
       <div class="solution-grid">
         <div class="solution-text">
-          <h3>What makes Pathbreak different</h3>
           <ul class="check-list">
-            <li><strong>Neurologically optimized step sizes</strong> — Micro-steps sized to working-memory limits and ultradian rhythms (typically 15–45 minutes).</li>
-            <li><strong>Evidence-based sequencing</strong> — Uses goal-gradient effect, implementation intentions, spaced practice, and deliberate practice principles.</li>
-            <li><strong>Adaptive by design</strong> — Continuously recalibrates based on your completion data, energy reports, and uploaded materials.</li>
-            <li><strong>Game layer without toxicity</strong> — XP, skill trees, flexible streaks, and narrative framing that motivate without shame.</li>
-            <li><strong>Built for real brains</strong> — First-class support for ADHD and executive-function challenges using clinical guidelines.</li>
+            <li><strong>Neurologically sized steps</strong> — Typically 15–45 minutes, aligned with working memory and ultradian rhythms.</li>
+            <li><strong>Evidence-based sequencing</strong> — Goal-gradient effect, implementation intentions, spaced practice, deliberate practice.</li>
+            <li><strong>Adaptive by design</strong> — Recalibrates from completion data, energy reports, and uploads.</li>
+            <li><strong>Game layer without toxicity</strong> — XP, skill trees, flexible streaks, narrative — no shame mechanics.</li>
+            <li><strong>Built for real brains</strong> — ADHD and executive-function support using clinical guidelines.</li>
           </ul>
         </div>
-        <div class="solution-visual">
-          <div class="feature-highlight">
-            <span class="label">Core Promise</span>
-            <p>“We don’t just split your goal. We design a path your brain is actually capable of walking.”</p>
-          </div>
+        <div class="feature-highlight">
+          <span class="label">Core promise</span>
+          <p>“We don’t just split your goal. We design a path your brain can actually walk.”</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How It Works -->
   <section id="how-it-works" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">How It Works</span>
-        <h2>From ambition to daily quests in minutes</h2>
+        <span class="section-tag">How it works</span>
+        <h2>From ambition to daily quests</h2>
       </div>
       <div class="steps-timeline">
         <div class="timeline-item">
           <div class="timeline-number">01</div>
           <div class="timeline-content">
             <h3>Enter your goal</h3>
-            <p>Type anything: “Read the Bible”, “Understand Java”, “Run a half-marathon”, “Launch a side project”. Pathbreak immediately offers intelligent refinements.</p>
+            <p>Type anything — “Read the Bible”, “Understand Java”, “Half-marathon”. Pathbreak offers intelligent refinements instantly.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-number">02</div>
           <div class="timeline-content">
             <h3>Answer a few smart questions</h3>
-            <p>Adaptive questionnaire covers timeframe, current skill level, preferred learning style, available time, energy peaks, motivation style, and any constraints (ADHD, anxiety, resources).</p>
+            <p>Timeframe, skill level, learning style, available time, energy peaks, motivation style, and constraints (ADHD, anxiety, resources).</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-number">03</div>
           <div class="timeline-content">
-            <h3>Receive your personalized roadmap</h3>
-            <p>The AI generates a hierarchical plan: major milestones → weekly themes → daily micro-steps (15–45 min) with clear success criteria and optional resources.</p>
+            <h3>Get a personalized roadmap</h3>
+            <p>Milestones → weekly themes → daily micro-steps with clear success criteria and optional resources.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-number">04</div>
           <div class="timeline-content">
-            <h3>Play, adapt, and level up</h3>
-            <p>Complete quests, earn XP, watch your skill tree grow. The system continuously adjusts step size and recovery based on real progress and energy data.</p>
+            <h3>Play, adapt, level up</h3>
+            <p>Complete quests, earn XP, grow your skill tree. The system adjusts step size and recovery from real progress.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
   <section id="features" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Core Features</span>
+        <span class="section-tag">Features</span>
         <h2>Everything you need to actually finish</h2>
       </div>
       <div class="features-grid">
-        <div class="feature-card">
-          <h3>🎯 Smart Goal Suggestions</h3>
-          <p>As soon as you type a goal, Pathbreak offers high-quality variants. “Read the Bible” becomes New Testament only, full Bible, chronological order, or Bible-in-a-Year. “Understand Java” becomes 1-week crash course, 3-month project track, or 6-month mastery path.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🧠 Science-Trained Decomposition</h3>
-          <p>Trained on peer-reviewed literature in cognitive neuroscience, behavioral psychology, productivity science, and clinical studies on executive function. Steps are sized to real cognitive limits, not arbitrary lists.</p>
-        </div>
-        <div class="feature-card">
-          <h3>📎 Media & Document Upload</h3>
-          <p>Upload PDFs, notes, screenshots, videos, or links. The AI extracts key content and weaves it directly into your roadmap — turning a textbook chapter into daily reading + practice blocks.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🎮 Game Layer (Without Toxicity)</h3>
-          <p>XP, skill trees, flexible streaks with recovery, optional narrative framing, and gentle “boss fights”. Motivation that respects your humanity.</p>
-        </div>
-        <div class="feature-card">
-          <h3>🔄 Adaptive Recalibration</h3>
-          <p>If you’re struggling, Pathbreak automatically shrinks step size and inserts recovery days. If you’re flying, it can gently increase challenge — always grounded in your data.</p>
-        </div>
-        <div class="feature-card">
-          <h3>♿ Accessibility First</h3>
-          <p>Built-in support for ADHD, dyslexia, low vision, and executive-function challenges using established clinical guidelines. Flexible recovery and low-pressure modes are defaults, not afterthoughts.</p>
-        </div>
-        <div class="feature-card">
-          <h3>📊 Evidence Transparency</h3>
-          <p>Want to know why a step is 28 minutes long? Toggle transparency mode to see the scientific rationale (working-memory limits, goal-gradient effect, etc.).</p>
-        </div>
-        <div class="feature-card">
-          <h3>📤 Export & Share</h3>
-          <p>Generate a clean PDF roadmap or share a public progress page. Perfect for accountability partners or personal archives.</p>
-        </div>
+        <article class="feature-card"><h3>🎯 Smart goal suggestions</h3><p>Bible → New Testament, chronological, full, or year plan. Java → 1-week crash course through 6-month mastery tracks.</p></article>
+        <article class="feature-card"><h3>🧠 Science-trained decomposition</h3><p>Steps sized to cognitive limits using neuroscience, behavioral psychology, and executive-function research.</p></article>
+        <article class="feature-card"><h3>📎 Media &amp; document upload</h3><p>PDFs, notes, links, and screenshots become part of the roadmap — chapters turn into daily practice blocks.</p></article>
+        <article class="feature-card"><h3>🎮 Game layer (no toxicity)</h3><p>XP, skill trees, flexible streaks with recovery, optional narrative, gentle boss challenges.</p></article>
+        <article class="feature-card"><h3>🔄 Adaptive recalibration</h3><p>Struggle → smaller steps and recovery days. Flying → optional challenge increase. Always data-driven.</p></article>
+        <article class="feature-card"><h3>♿ Accessibility first</h3><p>ADHD, dyslexia, low vision, and executive-function support. Low-pressure modes by default.</p></article>
+        <article class="feature-card"><h3>📊 Evidence transparency</h3><p>Optional rationale for step sizes — working-memory limits, goal-gradient effect, and more.</p></article>
+        <article class="feature-card"><h3>📤 Export &amp; share</h3><p>PDF roadmaps and optional public progress pages for accountability partners.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- Science -->
-  <section id="science" class="section">
+  <section id="compare" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">The Science</span>
-        <h2>Built on real research, not vibes</h2>
-        <p>Pathbreak’s core engine draws from decades of peer-reviewed work in how humans learn, stay motivated, and complete goals.</p>
+        <span class="section-tag">Compare</span>
+        <h2>Pathbreak vs. typical goal apps</h2>
+      </div>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Typical apps</th>
+              <th class="highlight-col">Pathbreak</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Step sizing</td>
+              <td>Arbitrary lists</td>
+              <td class="highlight-col">15–45 min cognitive load</td>
+            </tr>
+            <tr>
+              <td>Science base</td>
+              <td>Rarely cited</td>
+              <td class="highlight-col">Neuroscience + behavioral research</td>
+            </tr>
+            <tr>
+              <td>Adaptation</td>
+              <td>Static plans</td>
+              <td class="highlight-col">Live recalibration</td>
+            </tr>
+            <tr>
+              <td>ADHD / executive function</td>
+              <td>Afterthought</td>
+              <td class="highlight-col">Designed in from day one</td>
+            </tr>
+            <tr>
+              <td>Motivation model</td>
+              <td>Streak shame</td>
+              <td class="highlight-col">Flexible streaks + recovery</td>
+            </tr>
+            <tr>
+              <td>Uploads</td>
+              <td>Notes only</td>
+              <td class="highlight-col">Docs &amp; media woven into path</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="science" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The science</span>
+        <h2>Built on research, not vibes</h2>
+        <p>Decades of work on learning, motivation, and goal completion.</p>
       </div>
       <div class="science-grid">
-        <div class="science-card">
-          <h3>Cognitive Neuroscience</h3>
+        <article class="science-card">
+          <h3>Cognitive neuroscience</h3>
           <ul>
-            <li>Working memory capacity limits (Cowan, Baddeley)</li>
-            <li>Attention residual and task-switching costs</li>
+            <li>Working memory limits (Cowan, Baddeley)</li>
+            <li>Attention residual &amp; switching costs</li>
             <li>Dopamine-driven motivation loops</li>
-            <li>Ultradian rhythms and optimal focus blocks</li>
+            <li>Ultradian rhythms &amp; focus blocks</li>
           </ul>
-        </div>
-        <div class="science-card">
-          <h3>Behavioral Psychology</h3>
+        </article>
+        <article class="science-card">
+          <h3>Behavioral psychology</h3>
           <ul>
             <li>Implementation intentions (Gollwitzer)</li>
             <li>Goal-gradient effect (Hull, Kivetz)</li>
-            <li>Habit stacking and environment design</li>
-            <li>Self-determination theory (autonomy, competence, relatedness)</li>
+            <li>Habit stacking &amp; environment design</li>
+            <li>Self-determination theory</li>
           </ul>
-        </div>
-        <div class="science-card">
-          <h3>Learning & Productivity Science</h3>
+        </article>
+        <article class="science-card">
+          <h3>Learning science</h3>
           <ul>
-            <li>Deliberate practice principles</li>
-            <li>Spaced repetition and interleaving</li>
+            <li>Deliberate practice</li>
+            <li>Spaced repetition &amp; interleaving</li>
             <li>Desirable difficulties</li>
-            <li>Progress monitoring and feedback loops</li>
+            <li>Progress monitoring loops</li>
           </ul>
-        </div>
-        <div class="science-card">
-          <h3>Clinical & Executive Function</h3>
+        </article>
+        <article class="science-card">
+          <h3>Clinical &amp; executive function</h3>
           <ul>
-            <li>ADHD-friendly task design guidelines</li>
-            <li>Burnout prevention and recovery research</li>
-            <li>Anxiety-sensitive goal framing</li>
-            <li>Energy-based scheduling approaches</li>
+            <li>ADHD-friendly task design</li>
+            <li>Burnout prevention &amp; recovery</li>
+            <li>Anxiety-sensitive framing</li>
+            <li>Energy-based scheduling</li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Algorithm -->
-  <section id="algorithm" class="section section-alt">
+  <section id="algorithm" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Under the Hood</span>
-        <h2>The Decomposition Engine</h2>
-        <p>A high-level look at how Pathbreak turns a vague goal into a precise, adaptive roadmap.</p>
+        <span class="section-tag">Under the hood</span>
+        <h2>The decomposition engine</h2>
       </div>
       <div class="algorithm-flow">
-        <div class="algo-step">
-          <span class="algo-num">1</span>
-          <h4>Goal Understanding</h4>
-          <p>LLM + structured extraction normalizes the goal, detects domain, implied scope, and constraints.</p>
-        </div>
-        <div class="algo-step">
-          <span class="algo-num">2</span>
-          <h4>Contextual Profiling</h4>
-          <p>Combines questionnaire answers with historical completion data and energy patterns.</p>
-        </div>
-        <div class="algo-step">
-          <span class="algo-num">3</span>
-          <h4>Knowledge Retrieval</h4>
-          <p>RAG over a curated scientific corpus + any user-uploaded documents or media.</p>
-        </div>
-        <div class="algo-step">
-          <span class="algo-num">4</span>
-          <h4>Hierarchical Decomposition</h4>
-          <p>Major milestones → weekly themes → daily micro-steps (target 15–45 min cognitive load).</p>
-        </div>
-        <div class="algo-step">
-          <span class="algo-num">5</span>
-          <h4>Step-Size Optimizer</h4>
-          <p>Balances estimated cognitive load, available time, historical success probability, and domain learning curves.</p>
-        </div>
-        <div class="algo-step">
-          <span class="algo-num">6</span>
-          <h4>Adaptive Controller</h4>
-          <p>Continuously adjusts future steps and recovery frequency based on real completion and energy signals.</p>
-        </div>
+        <div class="algo-step"><span class="algo-num">1</span><h4>Goal understanding</h4><p>Normalize goal, domain, scope, and constraints.</p></div>
+        <div class="algo-step"><span class="algo-num">2</span><h4>Contextual profiling</h4><p>Questionnaire + history + energy patterns.</p></div>
+        <div class="algo-step"><span class="algo-num">3</span><h4>Knowledge retrieval</h4><p>Scientific corpus + your uploads (RAG).</p></div>
+        <div class="algo-step"><span class="algo-num">4</span><h4>Hierarchical decomposition</h4><p>Milestones → weeks → 15–45 min steps.</p></div>
+        <div class="algo-step"><span class="algo-num">5</span><h4>Step-size optimizer</h4><p>Load, time, success odds, learning curves.</p></div>
+        <div class="algo-step"><span class="algo-num">6</span><h4>Adaptive controller</h4><p>Adjust steps and recovery from live signals.</p></div>
       </div>
       <div class="tech-note">
-        <p><strong>Privacy note:</strong> Sensitive uploads can stay local. Cloud sync is encrypted. You own your data.</p>
+        <p><strong>Privacy:</strong> Sensitive uploads can stay local. Cloud sync is encrypted. You own your data.</p>
       </div>
     </div>
   </section>
 
-  <!-- Examples -->
-  <section id="examples" class="section">
+  <section id="examples" class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Live Examples</span>
-        <h2>See the smart suggestions in action</h2>
+        <span class="section-tag">Examples</span>
+        <h2>Smart suggestions in action</h2>
       </div>
       <div class="examples-grid">
-        <div class="example-card">
+        <article class="example-card">
           <h3>Goal: “Read the Bible”</h3>
-          <p class="example-label">Pathbreak immediately offers:</p>
+          <p class="example-label">Pathbreak offers</p>
           <ul>
             <li>New Testament only</li>
             <li>Full Bible</li>
             <li>Chronological order</li>
-            <li>One book at a time + historical context</li>
-            <li>Bible + companion study notes / audio</li>
-            <li>“Bible in a Year” reading plan vs. deep study mode</li>
+            <li>One book at a time + context</li>
+            <li>Study notes / audio companion</li>
+            <li>Bible in a Year vs. deep study</li>
           </ul>
-          <p class="example-note">Then it asks about timeframe, preferred depth, and whether you want accountability or pure personal study.</p>
-        </div>
-        <div class="example-card">
+          <p class="example-note">Then: timeframe, depth, and accountability preference.</p>
+        </article>
+        <article class="example-card">
           <h3>Goal: “Understand Java”</h3>
-          <p class="example-label">Pathbreak immediately offers:</p>
+          <p class="example-label">Pathbreak offers</p>
           <ul>
-            <li>1-week crash course (core syntax + simple projects)</li>
+            <li>1-week crash course</li>
             <li>1-month structured curriculum</li>
             <li>3-month project-based mastery</li>
-            <li>6-month path including Spring Boot / backend focus</li>
-            <li>Interview-prep track vs. pure learning track</li>
+            <li>6-month path (e.g. Spring / backend)</li>
+            <li>Interview-prep vs. pure learning</li>
           </ul>
-          <p class="example-note">It then factors in your current experience, available hours per week, and whether you learn best by reading, watching, or building.</p>
-        </div>
+          <p class="example-note">Then: experience, weekly hours, and learn-by-building preference.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Vision -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Vision</span>
         <h2>From personal goals to collective progress</h2>
       </div>
       <div class="vision-grid">
-        <div class="vision-phase">
+        <article class="vision-phase">
           <span class="phase">Phase 1</span>
           <h3>Individuals</h3>
-          <p>Learners, professionals, career switchers, and anyone who wants to finish what they start — with first-class support for ADHD and executive-function differences.</p>
-        </div>
-        <div class="vision-phase">
+          <p>Learners, professionals, career switchers — with first-class ADHD and executive-function support.</p>
+        </article>
+        <article class="vision-phase">
           <span class="phase">Phase 2</span>
-          <h3>Coaches & Teams</h3>
-          <p>Shared roadmaps, progress visibility, and science-backed coaching tools for educators, mentors, and small teams.</p>
-        </div>
-        <div class="vision-phase">
+          <h3>Coaches &amp; teams</h3>
+          <p>Shared roadmaps and science-backed tools for mentors, educators, and small teams.</p>
+        </article>
+        <article class="vision-phase">
           <span class="phase">Phase 3</span>
-          <h3>Enterprise Learning</h3>
-          <p>Structured skill development paths for organizations that actually respect how humans learn and stay motivated.</p>
-        </div>
+          <h3>Enterprise learning</h3>
+          <p>Skill paths that respect how humans actually learn and stay motivated.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
+  <section id="waitlist" class="cta-section">
     <div class="container">
       <h2>Ready to break the path?</h2>
-      <p>Join the waitlist for early access. Be among the first to experience goal tracking that was designed for real brains.</p>
-      <form class="waitlist-form" id="waitlist">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit" class="btn btn-primary btn-lg">Join Waitlist</button>
+      <p>Join the waitlist for early access. Goal tracking designed for real brains.</p>
+      <form class="waitlist-form" id="waitlist-form">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" type="email" placeholder="Enter your email" required autocomplete="email" />
+        <button type="submit" class="btn btn-primary btn-lg">Join waitlist</button>
       </form>
-      <p class="form-note">No spam. Just launch updates and early access invites.</p>
+      <p class="form-note" id="form-msg">No spam — only launch updates and early access.</p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <span class="logo">Pathbreak</span>
-        <p>Science-backed goal tracking that respects how brains actually work.</p>
+        <span class="logo">Pathbreak<span class="logo-dot">.</span></span>
+        <p>Science-backed goal tracking that respects how brains work.</p>
       </div>
       <div class="footer-links">
         <a href="#problem">Problem</a>
         <a href="#solution">Solution</a>
         <a href="#features">Features</a>
         <a href="#science">Science</a>
-        <a href="#algorithm">Algorithm</a>
+        <a href="#compare">Compare</a>
+        <a href="#examples">Examples</a>
       </div>
       <div class="footer-meta">
-        <p>Repo: <a href="https://github.com/jay117king/peeked" target="_blank">github.com/jay117king/peeked</a></p>
-        <p>© 2026 Pathbreak. Built with care for real human cognition.</p>
+        <p><a href="https://github.com/jay117king/peeked" target="_blank" rel="noopener">github.com/jay117king/peeked</a></p>
+        <p>© 2026 Pathbreak</p>
       </div>
     </div>
   </footer>
