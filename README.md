@@ -1,62 +1,44 @@
-# Pathbreak — Official Website
+# Pathbreak
 
-Science-backed, game-like goal tracker that turns any ambition into a neurologically optimized roadmap.
+Science-backed, game-like goal tracker that turns ambitions into neurologically optimized micro-steps.
 
-**Live site (after you enable Pages):**  
-https://jay117king.github.io/peeked/
-
-**Repository:**  
-https://github.com/jay117king/peeked
-
----
-
-## Enable the live website (GitHub Pages) — 30 seconds
-
-1. Open this repo while logged in as **jay117king**:  
-   https://github.com/jay117king/peeked
-
-2. Click **Settings** (repo menu bar).
-
-3. In the left sidebar, click **Pages**.
-
-4. Under **Build and deployment → Source**:
-   - Select **Deploy from a branch**
-   - **Branch:** `main`
-   - **Folder:** `/ (root)`
-   - Click **Save**
-
-5. Wait 30–90 seconds, then open:  
-   **https://jay117king.github.io/peeked/**
-
-If the page is blank or 404, hard-refresh (Ctrl/Cmd+Shift+R) or wait another minute for the first deploy.
+| Surface | Location | URL / build |
+|--------|----------|-------------|
+| **Marketing website** | Repo root (`index.html`) | https://jay117king.github.io/peeked/ |
+| **Mobile app (Expo)** | [`mobile/`](./mobile/) | Android APK via EAS — see [mobile/README.md](./mobile/README.md) |
 
 ---
 
-## What’s on the site
+## Website (GitHub Pages)
 
-- Hero + app mockup  
-- Problem / Solution  
-- How it works (4 steps)  
-- Full feature set  
-- Science foundation (neuroscience, behavioral psych, learning science, clinical)  
-- Algorithm pipeline  
-- Smart suggestion examples (Bible, Java)  
-- Vision phases  
-- Waitlist CTA  
+1. Repo **Settings → Pages**
+2. Source: **Deploy from a branch** → `main` → `/ (root)` → Save
+3. Open https://jay117king.github.io/peeked/
 
-Stack: pure HTML, CSS, vanilla JS. No build step. Fully responsive.
+---
 
-## Local preview
+## Mobile app → APK
 
 ```bash
-# open index.html in a browser, or:
-npx serve .
+cd mobile
+npm install
+npx expo start          # dev in Expo Go
+
+npm i -g eas-cli && eas login
+eas build -p android --profile preview   # downloadable APK
 ```
 
-## Optional: Vercel
+Full instructions: **[mobile/README.md](./mobile/README.md)**
 
-If you deploy to Vercel, turn **off** Deployment Protection / Vercel Authentication under  
-Project → Settings → Deployment Protection, or the site will redirect to login.
+### App screens (v1)
+
+1. **Home** — active path + XP progress  
+2. **Goal** — entry + smart suggestions (Bible / Java / generic)  
+3. **Questionnaire** — timeframe, skill, minutes/day, ADHD-friendly sizing  
+4. **Roadmap** — milestones, micro-steps, rationales, completion + XP  
+5. **Mind training** — retrieval practice tips + box-breathing cycle  
+
+Decomposition lives in `mobile/lib/engine.ts` (heuristic v1; swap for LLM+RAG later).
 
 ---
 
